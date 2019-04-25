@@ -1,0 +1,10 @@
+- name: Arch Linux Rice
+  descr: "After using Arch Linux for almost two years I settled on this install using it on all my machines nowadays. It is very basic but nonetheless has all necessary features."
+  
+  github: https://github.com/alexanderstephan/i3-dotfiles
+
+- name: Arduino Weather Station
+  descr: "Small weather station I am currently developing with a NodeMCU. It  will send weather data to a websocket. On the website there will be some nice graphs hopefully."
+
+
+  github: https://github.com/alexanderstephan/arduino-env-sense

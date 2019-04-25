@@ -1,0 +1,20 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: Alpine Keyboards
+  link: https://alpine-keyboards.com
+  date: October 2017 -  <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Founder
+
+- name: FOS metal workshop
+  date: March 2017 - August 2017
+  job: Metal Worker
+
+- name: pcwerx GmbH
+  link: http://www.pcwerx.com/
+  date: September 2016 - March 2017
+  job: IT consultant
+
+- name: designbüro x-height
+  link: https://www.x-height.de/
+  date: Mai 2014
+  job: Designer

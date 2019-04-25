@@ -1,0 +1,6 @@
+# skills section data
+
+label: Ability
+id : cs
+aspects: Motivation, C, Shell, HTML/CSS, Arduino, Hardware Repair
+percentage: 100, 65, 70, 60, 60, 70

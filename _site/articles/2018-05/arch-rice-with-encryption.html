@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="In order to make the arch/i3 installation process more smooth and efficient I will also provide a brief guide, which is based on a gist I wrote a while ago. ...">
+  <meta name="keywords" content="Technology, Tea, and Keyboards">
+  <meta name="author" content="Minimalistic Arch Linux Rice with Encryption | Alexander Stephan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Minimalistic Arch Linux Rice with Encryption | Alexander Stephan">
+  <meta name="twitter:description" content="In order to make the arch/i3 installation process more smooth and efficient I will also provide a brief guide, which is based on a gist I wrote a while ago. ...">
+  <meta name="twitter:image" content="/img/leonids-logo.png">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="Minimalistic Arch Linux Rice with Encryption | Alexander Stephan">
+  <meta property="og:description" content="In order to make the arch/i3 installation process more smooth and efficient I will also provide a brief guide, which is based on a gist I wrote a while ago. ...">
+  <meta property="og:image" content="/img/leonids-logo.png">
+  <title>Minimalistic Arch Linux Rice with Encryption | Alexander Stephan</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="canonical" href="/articles/2018-05/arch-rice-with-encryption">
+  <link rel="alternate" type="application/rss+xml" title="Alexander Stephan" href=" /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <a href="/" class="author_name"></a>
+  <span class="author_job"></span>
+  <span class="author_bio mbm"></span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/">home</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="/archive/">Archive</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="/categories/">Categories</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="/resume/">Resume</a>
+        
+      </li>
+       
+    </ul>
+  </nav>
+  
+<script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+  
+</script>
+<div class="social-links">
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "/" >
+  Home
+</a>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="Minimalistic Arch Linux Rice with Encryption">Minimalistic Arch Linux Rice with Encryption</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        22 MAY 2018
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>In order to make the arch/i3 installation process more smooth and efficient I will also provide a brief guide, which is based on a gist I wrote a while ago. Key features of this install are full disk encryption as well as several optimizations for flash drives.</p>
+
+<p>List of noticable Programs:</p>
+
+<ul>
+  <li><a href="https://wiki.archlinux.de/title/Urxvt">Urxvt</a>   <em>Minimal Terminal Emulator with transparency support and a lot of customizability</em></li>
+  <li><a href="https://github.com/DaveDavenport/rofi">rofi</a>    <em>Launcher</em></li>
+  <li><a href="https://github.com/cylgom/excalibar">Excalibar</a> <em>Sleek i3bar replacement written in C</em></li>
+  <li><a href="https://github.com/chjj/compton">Compton</a> <em>Desktop compositor</em></li>
+  <li><a href="https://github.com/alexanderstephan/ly">Ly</a> <em>Sleek login manager also written in C</em>
+<!--more--></li>
+</ul>
+
+<p><strong>Warranty Disclaimer:</strong></p>
+
+<p>I am not responsible for data loss, possible hardware failures, thermonuclear war,
+or you getting fired because your arch driven atomic plant failed.</p>
+
+<p>If you have any concerns regarding the installation don’t hesitate to do some research
+on your own to prevent possible failures or bugs.</p>
+
+<p>After booting the arch iso you’ll will have to proceed with the following steps:</p>
+
+<ul>
+  <li>Temporarily load your preferred keyboard layout</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>loadkeys de
+</code></pre></div></div>
+
+<ul>
+  <li>Find out your block device name</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk or lsblk <span class="nt">-Sp</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Create boot and root partition</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>parted <span class="nt">-a</span> optimal /dev/&lt;devicename&gt; mklabel gpt mkpart primary 0% 257MiB name 1 boot mkpart primary 257MiB 100% name 2 root
+mkfs.btrfs <span class="nt">-L</span> boot /dev/&lt;devicename&gt;1
+
+cryptsetup luksFormat /dev/&lt;devicename&gt;2
+
+cryptsetup open /dev/&lt;devicename&gt;2 root
+
+mkfs.f2fs <span class="nt">-l</span> root /dev/mapper/root
+</code></pre></div></div>
+
+<ul>
+  <li>Mount devices</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount /dev/mapper/root /mnt
+<span class="nb">mkdir</span> /mnt/boot
+mount &lt;devicename&gt;1 /mnt/boot
+</code></pre></div></div>
+
+<ul>
+  <li>Install base system</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacstrap /mnt base base-devel intel-ucode<span class="sb">`</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Write fstab (contains all the drives that will be mounted upon booting)</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>genfstab <span class="nt">-p</span> /mnt <span class="o">&gt;</span> /mnt/etc/fstab
+</code></pre></div></div>
+
+<ul>
+  <li>Change root envirement to freshly installed base system
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arch-chroot /mnt/
+</code></pre></div>    </div>
+  </li>
+  <li>Name your machine</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo </span>myhost <span class="o">&gt;</span> /etc/hostname
+</code></pre></div></div>
+
+<ul>
+  <li>Locals</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8 <span class="o">&gt;</span> /etc/locale.conf
+nano /etc/locale.gen
+locale-gen
+<span class="nb">echo </span><span class="nv">KEYMAP</span><span class="o">=</span>de-latin1 <span class="o">&gt;</span> /etc/vconsole.conf
+</code></pre></div></div>
+
+<ul>
+  <li>Timezone</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sb">`</span><span class="nb">ln</span> <span class="nt">-sf</span> /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+</code></pre></div></div>
+
+<ul>
+  <li>Mirrors</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+<span class="nb">grep</span> <span class="nt">-E</span> <span class="nt">-A</span> 1 <span class="s2">".*Germany.*$"</span> /etc/pacman.d/mirrorlist.bak | <span class="nb">sed</span> <span class="s1">'/--/d'</span> <span class="o">&gt;</span> /etc/pacman.d/mirrorlist
+</code></pre></div></div>
+
+<ul>
+  <li>Local DNS</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/hosts
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  #&lt;ip-address&gt;	&lt;hostname.domain.org&gt;	&lt;hostname&gt;
+  127.0.0.1	localhost.localdomain	localhost
+  ::1		localhost.localdomain	localhost
+</code></pre></div></div>
+
+<ul>
+  <li>Uncomment [multilib] to add 32-bit support</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/pacman.conf<span class="sb">`</span>
+pacman <span class="nt">-Sy</span><span class="sb">`</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Set root password</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>passwd
+</code></pre></div></div>
+
+<ul>
+  <li>Install syslinux bootloader</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> gptfdisk syslinux
+syslinux-install_update <span class="nt">-iam</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Just keep DEFAULT + LABELS and add “cryptdevice=/dev/nvme0n1p2:root root=/dev/mapper/root rw” after APPEND</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /boot/syslinux/syslinux.cfg
+</code></pre></div></div>
+
+<ul>
+  <li>Add “encrypt” Hook and create kernel image</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/mkinitcpio.conf
+<span class="nb">sudo </span>pacman <span class="nt">-S</span> f2fs-tools btrfs-progs
+mkinitcpio <span class="nt">-p</span> linux
+</code></pre></div></div>
+
+<ul>
+  <li>Possibly do a reboot here</li>
+</ul>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/articles/2018-05/arch-rice-with-encryption" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/articles/2018-05/arch-rice-with-encryption" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/articles/2018-05/arch-rice-with-encryption" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=/articles/2018-05/arch-rice-with-encryption" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=/articles/2018-05/arch-rice-with-encryption" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+        <footer>
+  &copy; 2018 Alexander Stephan. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-62251910-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
