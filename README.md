@@ -10,6 +10,10 @@ Visit `http://localhost:4000` to see the site in action
 
 Based on [leonids](https://github.com/renyuanz/leonids) theme
 
+## Screenshot
+
+![Screenshot of my website](https://raw.githubusercontent.com/alexanderstephan/discolovers/master/discolovers.png "discolovers.de")
+
 ## Goals
 
 - Ultimately port the website to hugo
