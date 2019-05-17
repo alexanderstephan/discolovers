@@ -1,4 +1,4 @@
-## Quick setup
+## Quick Setup
 
 `git clone https://github.com/alexanderstephan/discolovers.git`
 
@@ -15,3 +15,7 @@ Based on [leonids](https://github.com/renyuanz/leonids) theme
 - Ultimately port the website to hugo
 - Improve layout of the "About" section
 - Add GPG Key
+
+## How It Looks
+
+![Screenshot of my website](https://raw.githubusercontent.com/alexanderstephan/discolovers/master/discolovers.png "discolovers.de")
