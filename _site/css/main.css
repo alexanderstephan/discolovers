@@ -479,9 +479,9 @@ table {
   width: 100%;
   display: table; }
   table.bordered > thead > tr, table.bordered > tbody > tr {
-    border-bottom: 1px solid #d0d0d0; }
+    border-bottom: 1px solid #C5E1A5; }
   table.striped > tbody > tr:nth-child(odd) {
-    background-color: #f2f2f2; }
+    background-color: #C5E1A5; }
   table.striped > tbody > tr > td {
     border-radius: 0; }
   table.highlight > tbody > tr {
@@ -491,14 +491,14 @@ table {
     -o-transition: background-color 0.25s ease;
     transition: background-color 0.25s ease; }
     table.highlight > tbody > tr:hover {
-      background-color: #f2f2f2; }
+      background-color: #C5E1A5; }
   table.centered thead tr th,
   table.centered tbody tr td,
   table.centered tfoot tr td {
     text-align: center; }
 
 thead {
-  border-bottom: 1px solid #d0d0d0; }
+  border-bottom: 1px solid #C5E1A5; }
 
 td,
 th {
@@ -509,7 +509,7 @@ th {
   border-radius: 2px; }
 
 tfoot {
-  border-top: 1px solid #d0d0d0; }
+  border-top: 1px solid #C5E1A5; }
 
 b,
 i,
@@ -537,12 +537,12 @@ footer {
   padding: 3em 0; }
   footer .heart-icon {
     color: #f83e4b;
-    text-shadow: 0 0 5px #fff, 0 0 10px #f83e4b; }
+    text-shadow: 0 0 5px #F7F7F7, 0 0 10px #f83e4b; }
 
 .related-articles {
   margin-top: 2em; }
   .related-articles h4 {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .related-articles ul {
     margin: 0;
     padding: 0;
@@ -769,10 +769,10 @@ footer {
   padding-bottom: 1em; }
 
 .primary-text-color {
-  color: #ee5858; }
+  color: #F50057; }
 
 .primary-bg-color {
-  background-color: #ee5858; }
+  background-color: #F50057; }
 
 .secondary-text-color {
   color: #68dbeb; }
@@ -1036,12 +1036,12 @@ footer {
    ========================================================================== */
 html {
   line-height: 1.5;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 15px; }
+  font-size: 16px; }
 
 blockquote {
   display: block;
@@ -1052,9 +1052,9 @@ blockquote {
 
 a {
   text-decoration: none;
-  color: #ee5858; }
+  color: #F50057; }
   a:hover, a:focus {
-    color: #f59999;
+    color: #ff3d82;
     text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1080,8 +1080,8 @@ h3 {
   margin: 0.75rem 0 0.6rem 0; }
 
 h4 {
-  font-size: 1.25rem;
-  margin: 0.625rem 0 0.5rem 0; }
+  font-size: 2.1rem;
+  margin: 1.05rem 0 0.84rem 0; }
 
 h5 {
   font-size: 1.15rem;
@@ -1121,68 +1121,68 @@ p {
   margin-bottom: 20px;
   padding: 8px 20px;
   font-size: 0.875em;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  background-color: #ee5858;
-  color: #fff;
+  background-color: #F50057;
+  color: #F7F7F7;
   border-width: 2px !important;
   border-style: solid !important;
-  border-color: #ee5858;
+  border-color: #F50057;
   text-decoration: none !important;
   border-radius: 5px; }
   .btn:visited {
-    color: #fff;
-    border-color: #ee5858; }
+    color: #F7F7F7;
+    border-color: #F50057; }
   .btn:hover {
-    background-color: #fff;
-    color: #ee5858;
-    border-color: #ee5858; }
+    background-color: #F7F7F7;
+    color: #F50057;
+    border-color: #F50057; }
 
 .btn-success {
   background-color: #65e892;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #65e892; }
   .btn-success:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #65e892; }
   .btn-success:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #65e892;
     border-color: #65e892; }
 
 .btn-warning {
   background-color: #F5A623;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #F5A623; }
   .btn-warning:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #F5A623; }
   .btn-warning:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #F5A623;
     border-color: #F5A623; }
 
 .btn-danger {
   background-color: #f83e4b;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #f83e4b; }
   .btn-danger:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #f83e4b; }
   .btn-danger:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #f83e4b;
     border-color: #f83e4b; }
 
 .btn-info {
   background-color: #09ABF6;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #09ABF6; }
   .btn-info:visited {
     border-color: #09ABF6;
-    color: #fff; }
+    color: #F7F7F7; }
   .btn-info:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #09ABF6;
     border-color: #09ABF6; }
 
@@ -1194,7 +1194,7 @@ pre, code {
   color: #525252;
   font-size: 0.9em;
   background-color: #f8f8f8;
-  font-size: 12px; }
+  font-size: 13px; }
 
 code {
   color: #e96900;
@@ -1301,7 +1301,7 @@ pre code {
       height: 20px;
       font-weight: 600; }
   .highlight .hll {
-    background-color: #ffffcc; }
+    background-color: #EEFF41; }
   .highlight .c {
     color: #B0B2B0;
     font-style: italic; }
@@ -1444,7 +1444,7 @@ pre code {
 
 /* LAYOUT CSS */
 .cover {
-  background-color: #000000;
+  background-color: #212121;
   position: fixed;
   text-align: center;
   width: 100%;
@@ -1471,7 +1471,7 @@ pre code {
     float: none; }
   .cover-card .author_name {
     display: block;
-    color: #ee5858;
+    color: #F50057;
     font-size: 1.75em;
     text-transform: lowercase; }
   .cover-card .author_job {
@@ -1491,7 +1491,7 @@ pre code {
       padding: 0 0px 80px; } }
 
 .social-links {
-  margin-top: 0.5em; }
+  margin-top: 0.8em; }
   .social-links ul {
     margin: 0;
     padding: 0; }
@@ -1566,7 +1566,7 @@ ul.tag-cloud {
     left: -2px;
     height: 100%;
     width: 4px;
-    background: #000000; }
+    background: #212121; }
   .archive #timeline:after {
     content: "";
     display: table;
@@ -1593,7 +1593,7 @@ ul.tag-cloud {
     margin: 1em auto; }
 
 .post-listing {
-  background-color: #fff;
+  background-color: #F7F7F7;
   position: absolute;
   top: 400px;
   z-index: 233;
@@ -1631,11 +1631,11 @@ section.post {
   padding: 0.5em 1em; }
 
 .post-title-link {
-  color: #ee5858;
+  color: #F50057;
   font-size: 14px;
   margin-left: 10px; }
   .post-title-link:hover, .post-title-link:focus {
-    color: #f59999; }
+    color: #ff3d82; }
 
 .post-meta {
   font-size: 13px;
@@ -1649,7 +1649,7 @@ section.post {
     text-transform: uppercase;
     color: #F5A623; }
   .post-meta .read-time {
-    color: #ee5858; }
+    color: #F50057; }
 
 a.read-more {
   padding: 5px 8px; }
@@ -1734,60 +1734,60 @@ a.read-more {
 
 .twitter {
   background-color: #77bcf1;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #77bcf1; }
   .twitter:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #77bcf1; }
   .twitter:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #77bcf1;
     border-color: #77bcf1; }
 
 .facebook {
   background-color: #627aac;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #627aac; }
   .facebook:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #627aac; }
   .facebook:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #627aac;
     border-color: #627aac; }
 
 .google-plus {
   background-color: #e36f60;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #e36f60; }
   .google-plus:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #e36f60; }
   .google-plus:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #e36f60;
     border-color: #e36f60; }
 
 .hacker-news {
   background-color: #f60;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #f60; }
   .hacker-news:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #f60; }
   .hacker-news:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #f60;
     border-color: #f60; }
 
 .reddit {
   background-color: #5f99cf;
-  color: #fff;
+  color: #F7F7F7;
   border-color: #5f99cf; }
   .reddit:visited {
-    color: #fff;
+    color: #F7F7F7;
     border-color: #5f99cf; }
   .reddit:hover {
-    background-color: #fff;
+    background-color: #F7F7F7;
     color: #5f99cf;
     border-color: #5f99cf; }

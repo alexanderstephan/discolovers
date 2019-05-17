@@ -1,12 +1,11 @@
---
+---
 layout: post
-title:  "Minimalistic Arch Linux Rice with Encryption"
-date:   2018-05-22 15:07:19
+title:  "Getting started with Arch Linux"
+date:   2018-10-22 15:07:19
 categories: [tutorial]
 comments: true
 share: true
 ---
-
 ## Warranty Disclaimer:
 
 I am not responsible for data loss, possible hardware failures, thermonuclear war, or you getting fired because your arch driven atomic plant failed.
@@ -182,8 +181,7 @@ You can start sway by adding it to the end of your `~/.bashrc`.
 
 For further customization please refer to my [dotfiles repo](https://github.com/alexanderstephan/dotfiles).
 
-
-
+I hope this helped someone!
 
 
 

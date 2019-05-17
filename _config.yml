@@ -5,7 +5,7 @@
 #
 title: Alexander Stephan
 email: xan@discolovers.de
-description: My own personal blog
+description: Essays about mythoughts and projects
 url: # the base hostname & protocol for your site
 keywords: ["Technology", "Tea", "Keyboards"]
 
@@ -35,11 +35,11 @@ kramdown:
 owner:
   name: Alexander Stephan
   avatar: avatar.png
-  job: 
+  job: Developer
   bio: "Enthusiast for various things including UNIX, keyboards & tea."
   email: xan@discolovers.de
   disqus-shortname: #username
-  twitter: xan_stephan #username
+  twitter: #username
   facebook: #username
   google:
     plus: #username
@@ -48,7 +48,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: alexanderstephan #username
+  github: alexanderstephan
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
@@ -57,12 +57,12 @@ owner:
   tumblr: #username
   pinterest: #username
   foursquare: #username
-  steam: flashdance25 #username
+  steam: #username
   dribbble: #username
   youtube: #username
   soundcloud: #username
   weibo: #username
-  flickr: AlexanderStephan #username
+  flickr: AlexanderStephan
   codepen: #username
-  telegram: alexanderstephan #username
+  telegram: alexanderstephan 
   chewtv: alexanderstephan
