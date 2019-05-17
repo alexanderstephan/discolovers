@@ -16,6 +16,6 @@ Based on [leonids](https://github.com/renyuanz/leonids) theme
 - Improve layout of the "About" section
 - Add GPG Key
 
-### How It Looks
+## How It Looks
 
 ![Screenshot of my website](https://raw.githubusercontent.com/alexanderstephan/discolovers/master/discolovers.png "discolovers.de")
