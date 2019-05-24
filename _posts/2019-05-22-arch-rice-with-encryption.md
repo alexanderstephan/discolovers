@@ -15,13 +15,14 @@ If you have any concerns regarding the installation don’t hesitate to do some 
 
 After booting the arch iso you’ll will have to proceed with the following steps:
 
-## Prerequisits: 
+
+## Prerequisits:
 - A working [Arch Linux](https://www.archlinux.org/download/) boot stick
 
 ``` shell
 sudo dd if=<path-to-image.iso> of=/dev/<name-of-usb> bs=4M status=progress
 ```
-- A BIOS that capable of UEFI
+- A BIOS that is capable of UEFI
 
 
 ## Step 1: Prepare root file system
@@ -81,7 +82,7 @@ Generate `fstab` (contains all drives that will be mounted during booting).
 genfstab -p /mnt > /mnt/etc/fstab
 ```
 
-## Step 2: Setup the new root system 
+## Step 2: Setup the new root system
 
 ``` shell
 arch-chroot /mnt
@@ -153,20 +154,20 @@ Create an initramfs that loads programs very early in the `userspace`.
 
 ``` shell
 mkinitcpio -p linux
-``` 
+```
 Now we need to install a boot loader. If you use UEFI you can do the following after installing it with `pacman -S grub`.
 
 ``` shell
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
-``` 
+```
 
 Now we can create a non-root user and add him to any group for example `wheel` and `audio`:
 
 ``` shell
 useradd -m -g users -s /bin/bash alex
-gpasswd -a alex wheel audio 
-``` 
+gpasswd -a alex wheel audio
+```
 
 Automatically set the system time:
 
@@ -188,4 +189,5 @@ You can start sway by adding it to the end of your `~/.bashrc`.
 For further customization please refer to my [dotfiles repo](https://github.com/alexanderstephan/dotfiles).
 
 I hope this helped!
+
 
