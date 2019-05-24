@@ -34,7 +34,7 @@ Temporarily load your preferred keyboard layout.
 loadkeys de
 ```
 
-Find out your block device name (`-Sp` makes it easier to recognize the drive).
+Find out your block device name `-Sp` makes it easier to recognize the drive).
 
 ``` shell
 lsblk -Sp
