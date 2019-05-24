@@ -445,7 +445,7 @@ th {
   box-sizing: border-box; }
 
 .notice {
-  border: 1px solid rgba(115, 115, 115, 0.87);
+  border: 1px solid white;
   border-radius: 0.4em;
   padding: 0.5em 1em; }
 
@@ -537,7 +537,7 @@ footer {
   padding: 3em 0; }
   footer .heart-icon {
     color: #f83e4b;
-    text-shadow: 0 0 5px #F7F7F7, 0 0 10px #f83e4b; }
+    text-shadow: 0 0 5px #000000, 0 0 10px #f83e4b; }
 
 .related-articles {
   margin-top: 2em; }
@@ -1038,7 +1038,7 @@ html {
   line-height: 1.5;
   font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.87);
+  color: white;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 16px; }
@@ -1063,9 +1063,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit;
-  color: rgba(0, 0, 0, 0.87); }
+  color: white; }
   h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus {
-    color: rgba(61, 61, 61, 0.87); }
+    color: white; }
 
 h1 {
   font-size: 2rem;
@@ -1124,65 +1124,65 @@ p {
   font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   background-color: #F50057;
-  color: #F7F7F7;
+  color: #000000;
   border-width: 2px !important;
   border-style: solid !important;
   border-color: #F50057;
   text-decoration: none !important;
   border-radius: 5px; }
   .btn:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #F50057; }
   .btn:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #F50057;
     border-color: #F50057; }
 
 .btn-success {
   background-color: #65e892;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #65e892; }
   .btn-success:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #65e892; }
   .btn-success:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #65e892;
     border-color: #65e892; }
 
 .btn-warning {
   background-color: #F5A623;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #F5A623; }
   .btn-warning:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #F5A623; }
   .btn-warning:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #F5A623;
     border-color: #F5A623; }
 
 .btn-danger {
   background-color: #f83e4b;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #f83e4b; }
   .btn-danger:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #f83e4b; }
   .btn-danger:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #f83e4b;
     border-color: #f83e4b; }
 
 .btn-info {
   background-color: #09ABF6;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #09ABF6; }
   .btn-info:visited {
     border-color: #09ABF6;
-    color: #F7F7F7; }
+    color: #000000; }
   .btn-info:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #09ABF6;
     border-color: #09ABF6; }
 
@@ -1193,7 +1193,7 @@ pre, code {
   font-family: "Roboto Mono", "Courier New", monospace;
   color: #525252;
   font-size: 0.9em;
-  background-color: #f8f8f8;
+  background-color: #141414;
   font-size: 13px; }
 
 code {
@@ -1286,7 +1286,7 @@ pre code {
   .highlight pre {
     position: relative; }
   .highlight pre code {
-    color: #525252; }
+    color: #f8c287; }
     .highlight pre code::before {
       content: attr(data-lang);
       position: absolute;
@@ -1448,7 +1448,7 @@ pre code {
   position: fixed;
   text-align: center;
   width: 100%;
-  min-height: 400px;
+  height: 400px;
   padding: 30px 15px 20px;
   z-index: 1; }
   @media only screen and (min-width: 600px) {
@@ -1540,9 +1540,9 @@ ul.tag-cloud {
     padding-left: 1em;
     margin-bottom: .5em; }
     .tag-list .tag-group .tag-item a {
-      color: rgba(0, 0, 0, 0.87); }
+      color: white; }
       .tag-list .tag-group .tag-item a:hover, .tag-list .tag-group .tag-item a:focus {
-        color: rgba(61, 61, 61, 0.87); }
+        color: white; }
 
 .cat-list .cat-group {
   margin-bottom: 2em; }
@@ -1593,7 +1593,7 @@ ul.tag-cloud {
     margin: 1em auto; }
 
 .post-listing {
-  background-color: #F7F7F7;
+  background-color: #000000;
   position: absolute;
   top: 400px;
   z-index: 233;
@@ -1626,7 +1626,7 @@ section.post {
   font-size: 13px;
   font-weight: bold;
   color: #09ABF6;
-  border: 1px solid rgba(115, 115, 115, 0.87);
+  border: 1px solid white;
   border-radius: 0.4em;
   padding: 0.5em 1em; }
 
@@ -1734,60 +1734,60 @@ a.read-more {
 
 .twitter {
   background-color: #77bcf1;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #77bcf1; }
   .twitter:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #77bcf1; }
   .twitter:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #77bcf1;
     border-color: #77bcf1; }
 
 .facebook {
   background-color: #627aac;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #627aac; }
   .facebook:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #627aac; }
   .facebook:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #627aac;
     border-color: #627aac; }
 
 .google-plus {
   background-color: #e36f60;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #e36f60; }
   .google-plus:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #e36f60; }
   .google-plus:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #e36f60;
     border-color: #e36f60; }
 
 .hacker-news {
   background-color: #f60;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #f60; }
   .hacker-news:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #f60; }
   .hacker-news:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #f60;
     border-color: #f60; }
 
 .reddit {
   background-color: #5f99cf;
-  color: #F7F7F7;
+  color: #000000;
   border-color: #5f99cf; }
   .reddit:visited {
-    color: #F7F7F7;
+    color: #000000;
     border-color: #5f99cf; }
   .reddit:hover {
-    background-color: #F7F7F7;
+    background-color: #000000;
     color: #5f99cf;
     border-color: #5f99cf; }

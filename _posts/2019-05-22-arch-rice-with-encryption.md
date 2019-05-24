@@ -6,6 +6,7 @@ categories: [tutorial]
 comments: true
 share: true
 ---
+
 ## Warranty Disclaimer:
 
 I am not responsible for data loss, possible hardware failures, thermonuclear war, or you getting fired because your arch driven atomic plant failed.
@@ -21,6 +22,7 @@ After booting the arch iso you’ll will have to proceed with the following step
 sudo dd if=<path-to-image.iso> of=/dev/<name-of-usb> bs=4M status=progress
 ```
 - A BIOS that capable of UEFI
+
 
 ## Step 1: Prepare root file system
 
@@ -42,9 +44,13 @@ For quick formatting use `parted`, otherwise you can proceed using `fdisk` or `g
 ### Option 1:
 
 ``` shell
-parted -a optimal /dev/<devicename> mklabel gpt mkpart primary 0% 257MiB name 1 boot mkpart primary 257MiB 100% name 2 root
+parted
+mkpart primary fat32 1MiB 261MiBi # Create EFI system partition
+set 1 esp on
+mkpart primary ext4 261MiB 100% # Use the rest as ext4
 ```
-So this command creates a primary GPT partition on your device and creates a 257MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot.
+
+So this command creates a primary GPT partition on your device and creates a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.
 
 ### Option 2:
 
@@ -181,8 +187,5 @@ You can start sway by adding it to the end of your `~/.bashrc`.
 
 For further customization please refer to my [dotfiles repo](https://github.com/alexanderstephan/dotfiles).
 
-I hope this helped someone!
-
-
-
+I hope this helped!
 

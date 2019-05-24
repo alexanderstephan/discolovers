@@ -18,28 +18,28 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Getting started with Arch Linux | Alexander Stephan">
   <meta name="twitter:description" content="Warranty Disclaimer:I am not responsible for data loss, possible hardware failures, thermonuclear war, or you getting fired because your arch driven atomic p...">
-  <meta name="twitter:image" content="http://localhost:4000/img/leonids-logo.png">
+  <meta name="twitter:image" content="/img/leonids-logo.png">
 
   <!-- Open Graph Tags -->
   <meta property="og:type" content="blog">
-  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:url" content="">
   <meta property="og:title" content="Getting started with Arch Linux | Alexander Stephan">
   <meta property="og:description" content="Warranty Disclaimer:I am not responsible for data loss, possible hardware failures, thermonuclear war, or you getting fired because your arch driven atomic p...">
-  <meta property="og:image" content="http://localhost:4000/img/leonids-logo.png">
+  <meta property="og:image" content="/img/leonids-logo.png">
   <title>Getting started with Arch Linux | Alexander Stephan</title>
 
   <!-- CSS files -->
-  <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="http://localhost:4000/articles/2018-10/arch-rice-with-encryption">
-  <link rel="alternate" type="application/rss+xml" title="Alexander Stephan" href="http://localhost:4000 /feed.xml " />
+  <link rel="canonical" href="/articles/2018-10/arch-rice-with-encryption">
+  <link rel="alternate" type="application/rss+xml" title="Alexander Stephan" href=" /feed.xml " />
 
   <!-- Icons -->
   <!-- 16x16 -->
-  <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
   <!-- 32x32 -->
-  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
 </head>
 
 
@@ -51,34 +51,34 @@
 
 <div class="cover-card table-cell table-middle">
   
-  <img src="http://localhost:4000/img/avatar.png" alt="" class="avatar">
+  <img src="/img/avatar.png" alt="" class="avatar">
   
-  <a href="http://localhost:4000/" class="author_name">Alexander Stephan</a>
-  <span class="author_job">Developer</span>
+  <a href="/" class="author_name">Alexander Stephan</a>
+  <span class="author_job">All things Unix</span>
   <span class="author_bio mbm">Enthusiast for various things including UNIX, keyboards & tea.</span>
   <!-- <nav class="nav">
     <ul class="nav-list">
       <li class="nav-item">
-        <a href="http://localhost:4000/">home</a>
+        <a href="/">home</a>
         <span>/</span>
       </li>
        
       <li class="nav-item">
-        <a href="http://localhost:4000/archive/">Archive</a>
+        <a href="/archive/">Archive</a>
         
           <span>/</span>
         
       </li>
           
       <li class="nav-item">
-        <a href="http://localhost:4000/categories/">Categories</a>
+        <a href="/categories/">Categories</a>
         
           <span>/</span>
         
       </li>
             
       <li class="nav-item">
-        <a href="http://localhost:4000/resume/">Resume</a>
+        <a href="/resume/">Resume</a>
         
       </li>
        
@@ -137,7 +137,7 @@
     </div>
     <div class="col s12 m9">
       <div class="post-listing">
-        <a class="btn" href= "http://localhost:4000/" >
+        <a class="btn" href= "/" >
   Home
 </a>
 
@@ -198,9 +198,13 @@
 
 <h3 id="option-1">Option 1:</h3>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>parted <span class="nt">-a</span> optimal /dev/&lt;devicename&gt; mklabel gpt mkpart primary 0% 257MiB name 1 boot mkpart primary 257MiB 100% name 2 root
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>parted
+mkpart primary fat32 1MiB 261MiBi <span class="c"># Create EFI system partition</span>
+<span class="nb">set </span>1 esp on
+mkpart primary ext4 261MiB 100% <span class="c"># Use the rest as ext4</span>
 </code></pre></div></div>
-<p>So this command creates a primary GPT partition on your device and creates a 257MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot.</p>
+
+<p>So this command creates a primary GPT partition on your device and creates a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.</p>
 
 <h3 id="option-2">Option 2:</h3>
 
@@ -319,7 +323,7 @@ gpasswd <span class="nt">-a</span> alex wheel audio
 
 <p>For further customization please refer to my <a href="https://github.com/alexanderstephan/dotfiles">dotfiles repo</a>.</p>
 
-<p>I hope this helped someone!</p>
+<p>I hope this helped!</p>
 
 
   </article>
@@ -329,19 +333,19 @@ gpasswd <span class="nt">-a</span> alex wheel audio
   <h6>Share on: </h6>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2018-10/arch-rice-with-encryption" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=/articles/2018-10/arch-rice-with-encryption" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2018-10/arch-rice-with-encryption" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/articles/2018-10/arch-rice-with-encryption" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2018-10/arch-rice-with-encryption" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=/articles/2018-10/arch-rice-with-encryption" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
     </li>
     <li>
-      <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/articles/2018-10/arch-rice-with-encryption" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+      <a href="https://news.ycombinator.com/submitlink?u=/articles/2018-10/arch-rice-with-encryption" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
     </li>
     <li>
-      <a href="https://www.reddit.com/submit?url=http://localhost:4000/articles/2018-10/arch-rice-with-encryption" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+      <a href="https://www.reddit.com/submit?url=/articles/2018-10/arch-rice-with-encryption" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
     </li>
   </ul>
 </div><!-- end share-buttons -->
@@ -355,8 +359,8 @@ gpasswd <span class="nt">-a</span> alex wheel audio
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="http://localhost:4000/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="http://localhost:4000/js/main.js"></script>
+  <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 <!-- Asynchronous Google Analytics snippet -->
 <script>
