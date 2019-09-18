@@ -51,13 +51,13 @@ $hr-border-width:             $border-width;
 // Colors
 //
 
-$text-color:       white !default;
-$background-color: #212121;
-$white:            #000000;
-$primary:          #F50057;
-$secondary:        #68dbeb; 
-$success:          #65e892;
-$danger:           #f83e4b;
+$text-color:       #282828 !default;
+$background-color: #1d2021;
+$white:            #fbf1c7;
+$primary:          #8ec07c;
+$secondary:        #83a598;
+$success:          #b8bb26;
+$danger:           #d3869b;
 $warning:          #F5A623;
 $info:             #09ABF6;
 
@@ -72,7 +72,7 @@ $element-top-margin: $gutter-width/3 !default;
 $element-bottom-margin: ($gutter-width*2)/3 !default;
 
 // Media Query Ranges
-$small-screen: 600px !default;
-$medium-screen: 992px !default;
+$small-screen: 1000px !default;
+$medium-screen: 1100px !default;
 $large-screen: 1200px !default;
 $larger-screen: 1600px !default;

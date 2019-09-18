@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: C, Shell, HTML/CSS, Arduino, Servers
+aspects: C, Shell, HTML/CSS, Arduino, Go
 percentage: 90, 65, 70, 60, 60

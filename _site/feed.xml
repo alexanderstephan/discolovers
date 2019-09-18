@@ -3,10 +3,10 @@
   <channel>
     <title>Alexander Stephan</title>
     <description>Essays about mythoughts and projects</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 May 2019 22:44:05 +0200</pubDate>
-    <lastBuildDate>Fri, 24 May 2019 22:44:05 +0200</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 18 Sep 2019 16:13:36 +0200</pubDate>
+    <lastBuildDate>Wed, 18 Sep 2019 16:13:36 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -37,7 +37,7 @@
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;loadkeys de
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Find out your block device name (&lt;code class=&quot;highlighter-rouge&quot;&gt;-Sp&lt;/code&gt; makes it easier to recognize the drive).&lt;/p&gt;
+&lt;p&gt;Find out your block device name &lt;code class=&quot;highlighter-rouge&quot;&gt;-Sp&lt;/code&gt; makes it easier to recognize the drive).&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lsblk &lt;span class=&quot;nt&quot;&gt;-Sp&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -175,8 +175,8 @@ gpasswd &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; alex wheel audio
 
 </description>
         <pubDate>Mon, 22 Oct 2018 17:07:19 +0200</pubDate>
-        <link>http://localhost:4000/articles/2018-10/arch-rice-with-encryption</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2018-10/arch-rice-with-encryption</guid>
+        <link>/articles/2018-10/arch-rice-with-encryption</link>
+        <guid isPermaLink="true">/articles/2018-10/arch-rice-with-encryption</guid>
         
         
         <category>tutorial</category>
@@ -189,7 +189,7 @@ gpasswd &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; alex wheel audio
 
 &lt;p&gt;Install prerequisites:&lt;/p&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; python python-pip python-wxpython  dfu-programmer 
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; python python-pip python-wxpython  dfu-programmer
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;First of all we need to come up with our layout, which we use easykeymap.sh from the EasyAVR package for. It also generates a .hex file which we later use for flashing. In order to run easykeymap.sh we need to clone the project from GitLab.&lt;/p&gt;
 
@@ -197,11 +197,11 @@ gpasswd &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; alex wheel audio
 &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./easykeymap.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Firstly you need to create a new layout file and select your board accordingly. In my case it’s a GH60. There is also an option that lets you roughly determine the keyboard layout. In my case I selected ISO here as it’s the standard here in Europe. Now you can either further modify your selected layout in easykeymapper itself or use one from an external source. For example you can generate layout files online by using the [keyboard-layout-editor(https://keyboard-layout-editor.com).&lt;/p&gt;
+&lt;p&gt;Firstly you need to create a new layout file and select your board accordingly. In my case it’s a GH60. There is also an option that lets you roughly determine the keyboard layout. In my case I selected ISO here as it’s the standard here in Europe. Now you can either further modify your selected layout in &lt;code class=&quot;highlighter-rouge&quot;&gt;easykeymapper&lt;/code&gt; itself or use one from an external source. For example you can generate layout files online by using the [keyboard-layout-editor(https://keyboard-layout-editor.com).&lt;/p&gt;
 
-&lt;p&gt;To map the keys select the key you want to remap and click on the white rectangle beneath the scan code in the context menu. Now a virtual keyboard assists you in finding the correct key. In order to use function layers, you need to define a key as ‘Fn1’, ‘Fn0’ will not work. If you finished your layout you can go ahead and save it now in .json format for later modifications.&lt;/p&gt;
+&lt;p&gt;To map the keys select the key you want to remap and click on the white rectangle beneath the scan code in the context menu. Now a virtual keyboard assists you in finding the correct key. In order to use function layers, you need to define a key as &lt;code class=&quot;highlighter-rouge&quot;&gt;Fn1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Fn0&lt;/code&gt; will not work. If you finished your layout you can go ahead and save it now in .json format for later modifications.&lt;/p&gt;
 
-&lt;p&gt;Now you need to export the .hex file, that we will going to flash on to the keyboards microcontroller. To program your board you can either choose the “Build &amp;amp; Program” option or use dfu-programmer manually. I prefer the by hand method for security reasons since it doesn’t require you to open easykeymapper as root user. But keep in mind that you first need to put your board into boot mode by either pressing a reset button at the back of your PCB or use a predefined boot button.&lt;/p&gt;
+&lt;p&gt;Now you need to export the &lt;code class=&quot;highlighter-rouge&quot;&gt;.hex&lt;/code&gt; file, that we will going to flash on to the keyboards microcontroller. To program your board you can either choose the “Build &amp;amp; Program” option or use &lt;code class=&quot;highlighter-rouge&quot;&gt;dfu-programmer&lt;/code&gt; manually. I prefer the by hand method for security reasons since it doesn’t require you to open &lt;code class=&quot;highlighter-rouge&quot;&gt;easykeymapper&lt;/code&gt; as &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt; user. But keep in mind that you first need to put your board into boot mode by either pressing a reset button at the back of your PCB or use a predefined boot button.&lt;/p&gt;
 
 &lt;p&gt;The programming steps are as follows. If you’re board uses a different microntroller than the atmega32u4 simply replace the name. But keep in mind you need to use a second keyboard to enter the commands. Alternatively you can use a &lt;a href=&quot;https://gist.github.com/alexanderstephan/655e9fc4ab07f268af271c4084c19fef&quot;&gt;script&lt;/a&gt; as well.&lt;/p&gt;
 
@@ -218,8 +218,8 @@ dfu-programmer atmega32u4 flash &amp;lt;filename&amp;gt;.hex
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 22 Oct 2018 17:07:19 +0200</pubDate>
-        <link>http://localhost:4000/articles/2018-10/gh60-on-linux</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2018-10/gh60-on-linux</guid>
+        <link>/articles/2018-10/gh60-on-linux</link>
+        <guid isPermaLink="true">/articles/2018-10/gh60-on-linux</guid>
         
         
         <category>tutorial</category>
