@@ -51,11 +51,13 @@
 
 <div class="cover-card table-cell table-middle">
   
-  <img src="/img/avatar.png" alt="" class="avatar">
+  <a href="/">
+  <img src="/img/avatar.svg" alt="" class="avatar">
+  </a>
   
   <a href="/" class="author_name">Alexander Stephan</a>
   <span class="author_job">All things Unix</span>
-  <span class="author_bio mbm">Enthusiast for various things including UNIX, keyboards & tea.</span>
+  <span class="author_bio mbm">Enthusiast for various things including UNIX, keyboards & photography. Student at Technical University of Munich</span>
   <!-- <nav class="nav">
     <ul class="nav-list">
       <li class="nav-item">
@@ -171,7 +173,8 @@
 
 <p>After booting the arch iso you’ll will have to proceed with the following steps:</p>
 
-<h2 id="prerequisits">Prerequisits:</h2>
+<h2 id="prerequisites">Prerequisites:</h2>
+
 <ul>
   <li>A working <a href="https://www.archlinux.org/download/">Arch Linux</a> boot stick</li>
 </ul>
@@ -189,7 +192,7 @@
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>loadkeys de
 </code></pre></div></div>
 
-<p>Find out your block device name <code class="highlighter-rouge">-Sp</code> makes it easier to recognize the drive).</p>
+<p>Find out your block device name (<code class="highlighter-rouge">-Sp</code> makes it easier to recognize the drive).</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk <span class="nt">-Sp</span>
 </code></pre></div></div>
@@ -204,24 +207,24 @@ mkpart primary fat32 1MiB 261MiBi <span class="c"># Create EFI system partition<
 mkpart primary ext4 261MiB 100% <span class="c"># Use the rest as ext4</span>
 </code></pre></div></div>
 
-<p>So this command creates a primary GPT partition on your device and creates a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.</p>
+<p>This command creates a primary GPT partition on your device and a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.</p>
 
 <h3 id="option-2">Option 2:</h3>
 
 <p>Type in <code class="highlighter-rouge">fdisk</code> and navigate your way through the dialogs.</p>
 
-<p>Now you can format both partitions you just created as you desire.</p>
+<p>Now you can format both partitions you just created to your desired filesystem.</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs.vfat /dev/&lt;devicename&gt;1
 mkfs.ext4 /dev/&lt;devicename&gt;2
 </code></pre></div></div>
-<p>Mount devices so we can install the base root system on our drive</p>
+<p>Mount devices so we can install the base root system on our drive.</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> /mnt/boot/
 mount /dev/&lt;devicename&gt;2 /mnt
 mount /dev/&lt;devicename&gt;1 /mnt/boot/
 </code></pre></div></div>
-<p>Install base system including developer tools and patches for Intel processors on target device.</p>
+<p>Install the base system including developer tools and patches for Intel processors on target device.</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacstrap /mnt base base-devel intel-ucode
 </code></pre></div></div>
@@ -323,7 +326,7 @@ gpasswd <span class="nt">-a</span> alex wheel audio
 
 <p>For further customization please refer to my <a href="https://github.com/alexanderstephan/dotfiles">dotfiles repo</a>.</p>
 
-<p>I hope this helped!</p>
+<p>I hope this was helpful!</p>
 
 
   </article>

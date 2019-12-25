@@ -15,8 +15,8 @@ If you have any concerns regarding the installation don’t hesitate to do some 
 
 After booting the arch iso you’ll will have to proceed with the following steps:
 
+## Prerequisites:
 
-## Prerequisits:
 - A working [Arch Linux](https://www.archlinux.org/download/) boot stick
 
 ``` shell
@@ -27,14 +27,13 @@ sudo dd if=<path-to-image.iso> of=/dev/<name-of-usb> bs=4M status=progress
 
 ## Step 1: Prepare root file system
 
-
 Temporarily load your preferred keyboard layout.
 
 ``` shell
 loadkeys de
 ```
 
-Find out your block device name `-Sp` makes it easier to recognize the drive).
+Find out your block device name (`-Sp` makes it easier to recognize the drive).
 
 ``` shell
 lsblk -Sp
@@ -51,26 +50,26 @@ set 1 esp on
 mkpart primary ext4 261MiB 100% # Use the rest as ext4
 ```
 
-So this command creates a primary GPT partition on your device and creates a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.
+This command creates a primary GPT partition on your device and a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.
 
 ### Option 2:
 
 Type in `fdisk` and navigate your way through the dialogs.
 
-Now you can format both partitions you just created as you desire.
+Now you can format both partitions you just created to your desired filesystem.
 
 ``` shell
 mkfs.vfat /dev/<devicename>1
 mkfs.ext4 /dev/<devicename>2
 ```
-Mount devices so we can install the base root system on our drive
+Mount devices so we can install the base root system on our drive.
 
 ``` shell
 mkdir /mnt/boot/
 mount /dev/<devicename>2 /mnt
 mount /dev/<devicename>1 /mnt/boot/
 ```
-Install base system including developer tools and patches for Intel processors on target device.
+Install the base system including developer tools and patches for Intel processors on target device.
 
 ``` shell
 pacstrap /mnt base base-devel intel-ucode
@@ -188,6 +187,6 @@ You can start sway by adding it to the end of your `~/.bashrc`.
 
 For further customization please refer to my [dotfiles repo](https://github.com/alexanderstephan/dotfiles).
 
-I hope this helped!
+I hope this was helpful!
 
 

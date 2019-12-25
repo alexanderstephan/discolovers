@@ -14,7 +14,7 @@
   @include media-query($medium-screen) {
     height: 100vh;
     position: initial;
-    width: 100%;
+    width: 85%;
   }
 }
 .cover-card {
@@ -38,11 +38,14 @@
     font-size: 0.8em;
     font-weight: 700;
     text-transform: uppercase;
-    margin: -5px auto 10px;
+    margin: 7px auto 15px;
   }
   .author_bio {
     font-size: 90%;
-    display: block;
+    display: block;   
+    margin-left: 2em;
+    margin-right: 2em; 
+    text-align: center;
   }
   @include media-query($medium-screen) {
     /*text-align: right;*/

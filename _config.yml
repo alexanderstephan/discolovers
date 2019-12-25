@@ -5,7 +5,7 @@
 #
 title: Alexander Stephan
 email: xan@discolovers.de
-description: Essays about mythoughts and projects
+description: Essays about my thoughts and projects
 url: # the base hostname & protocol for your site
 keywords: ["Technology", "Tea", "Keyboards"]
 
@@ -34,9 +34,9 @@ kramdown:
 #
 owner:
   name: Alexander Stephan
-  avatar: avatar.png
+  avatar: avatar.svg
   job: All things Unix
-  bio: "Enthusiast for various things including UNIX, keyboards & tea."
+  bio: "Enthusiast for various things including UNIX, keyboards & photography. Student at Technical University of Munich"
   email: alexander.stephan@tum.de
   disqus-shortname: #username
   twitter: #username

@@ -10,7 +10,7 @@ Visit `http://localhost:4000` to see the site in action
 
 Based on [leonids](https://github.com/renyuanz/leonids) theme
 
-## To do and Goals
+## To Dos and Goals
 
 - Ultimately port the website to hugo
 - Improve layout of the "About" section

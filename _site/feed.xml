@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alexander Stephan</title>
-    <description>Essays about mythoughts and projects</description>
+    <description>Essays about my thoughts and projects</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Sep 2019 16:13:36 +0200</pubDate>
-    <lastBuildDate>Wed, 18 Sep 2019 16:13:36 +0200</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Thu, 26 Dec 2019 00:49:16 +0100</pubDate>
+    <lastBuildDate>Thu, 26 Dec 2019 00:49:16 +0100</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>Getting started with Arch Linux</title>
@@ -19,7 +19,8 @@
 
 &lt;p&gt;After booting the arch iso you’ll will have to proceed with the following steps:&lt;/p&gt;
 
-&lt;h2 id=&quot;prerequisits&quot;&gt;Prerequisits:&lt;/h2&gt;
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites:&lt;/h2&gt;
+
 &lt;ul&gt;
   &lt;li&gt;A working &lt;a href=&quot;https://www.archlinux.org/download/&quot;&gt;Arch Linux&lt;/a&gt; boot stick&lt;/li&gt;
 &lt;/ul&gt;
@@ -37,7 +38,7 @@
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;loadkeys de
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Find out your block device name &lt;code class=&quot;highlighter-rouge&quot;&gt;-Sp&lt;/code&gt; makes it easier to recognize the drive).&lt;/p&gt;
+&lt;p&gt;Find out your block device name (&lt;code class=&quot;highlighter-rouge&quot;&gt;-Sp&lt;/code&gt; makes it easier to recognize the drive).&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lsblk &lt;span class=&quot;nt&quot;&gt;-Sp&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -52,24 +53,24 @@ mkpart primary fat32 1MiB 261MiBi &lt;span class=&quot;c&quot;&gt;# Create EFI s
 mkpart primary ext4 261MiB 100% &lt;span class=&quot;c&quot;&gt;# Use the rest as ext4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;So this command creates a primary GPT partition on your device and creates a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.&lt;/p&gt;
+&lt;p&gt;This command creates a primary GPT partition on your device and a 260MiB boot partition at the start sector that will later become the EFI partiton for UEFI boot. Then we use the rest of the drive for installing the system. Of course you can tweak these commands according to your specific needs.&lt;/p&gt;
 
 &lt;h3 id=&quot;option-2&quot;&gt;Option 2:&lt;/h3&gt;
 
 &lt;p&gt;Type in &lt;code class=&quot;highlighter-rouge&quot;&gt;fdisk&lt;/code&gt; and navigate your way through the dialogs.&lt;/p&gt;
 
-&lt;p&gt;Now you can format both partitions you just created as you desire.&lt;/p&gt;
+&lt;p&gt;Now you can format both partitions you just created to your desired filesystem.&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkfs.vfat /dev/&amp;lt;devicename&amp;gt;1
 mkfs.ext4 /dev/&amp;lt;devicename&amp;gt;2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Mount devices so we can install the base root system on our drive&lt;/p&gt;
+&lt;p&gt;Mount devices so we can install the base root system on our drive.&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; /mnt/boot/
 mount /dev/&amp;lt;devicename&amp;gt;2 /mnt
 mount /dev/&amp;lt;devicename&amp;gt;1 /mnt/boot/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Install base system including developer tools and patches for Intel processors on target device.&lt;/p&gt;
+&lt;p&gt;Install the base system including developer tools and patches for Intel processors on target device.&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pacstrap /mnt base base-devel intel-ucode
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -171,7 +172,7 @@ gpasswd &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; alex wheel audio
 
 &lt;p&gt;For further customization please refer to my &lt;a href=&quot;https://github.com/alexanderstephan/dotfiles&quot;&gt;dotfiles repo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I hope this helped!&lt;/p&gt;
+&lt;p&gt;I hope this was helpful!&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 22 Oct 2018 17:07:19 +0200</pubDate>
